@@ -1,0 +1,59 @@
+@import '../../mixins';
+
+.add-todo-container {
+  text-align: center;
+  
+  form {
+    @include displayFlex();
+    flex-direction: column;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 12px;
+  }
+
+  input {
+    padding: 22px 20px;
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    border: none;
+    @include boxShadow();
+    outline: none;
+  }
+
+  textarea {
+    padding: 22px 20px;
+    width: 100%;
+    height: auto;
+    resize: vertical;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    @include boxShadow();
+  }
+
+  button {
+    padding: 22px 20px;
+    background-color: rgb(80, 134, 185); 
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4px;
+    @include boxShadow();
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      opacity: .8;
+      color: #fff;
+      transition: opacity .3s, color .4s;
+    }
+
+    &:active {
+      background-color: rgb(65, 96, 126); 
+      color: #fff;
+      transition: background-color .3s, color .4s;
+    }
+  }
+}
