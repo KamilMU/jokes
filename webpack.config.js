@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[hash:8].js',
@@ -17,13 +17,16 @@ module.exports = {
     }),
     new CleanWebpackPlugin()
   ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.css', '.scss'],
+  },
   module: {
     rules: [
       // JavaScript
       {
-        test: /\.jsx?$/, 
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: ['babel-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,

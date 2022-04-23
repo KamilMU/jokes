@@ -1,7 +1,14 @@
 import React from 'react';
+import { JokeType } from '../../types';
 import './styles.scss';
 
-export function Joke({ joke, onFavouriteClick, isAddedToFav }) {
+interface Props {
+  joke: JokeType,
+  onFavouriteClick: () => void,
+  isAddedToFav: boolean,
+}
+
+export function Joke({ joke, onFavouriteClick, isAddedToFav }: Props) {
   return (
     <div className="joke-container">
       <div className="joke-container__id">ID: {joke.id}</div>

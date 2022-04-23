@@ -2,8 +2,13 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import Joke from '../../components/Joke';
 import { addJokeToFavourites } from '../../store/actions';
+import { JokeType } from '../../types';
 
-export function JokeContainer({ joke }) {
+interface Props {
+  joke: JokeType,
+}
+
+export function JokeContainer({ joke }: Props) {
   const [isAddedToFav, setIsAddedToFav] = useState(false);
   const dispatch = useDispatch();
 
