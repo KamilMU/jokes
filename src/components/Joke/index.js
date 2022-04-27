@@ -1,1 +1,1 @@
-export {Joke as default} from './Joke.tsx';
+export {Joke as default} from './Joke';

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import './styles.scss';
-import Header from '../Header';
-import JokeList from '../JokeList';
+import JokeList from '../../containers/JokeList';
 import UpdateButton from '../../containers/UpdateButton';
+import HeaderContainer from '../../containers/HeaderContainer';
 
 export function App() {
   return (
     <div className="app">
-      <Header />
+      <HeaderContainer />
       <JokeList />
       <UpdateButton
         title="change jokes"

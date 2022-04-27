@@ -1,24 +1,19 @@
 import axios from 'axios';
 import {
-  UPDATE_JOKELIST, DELETE_JOKE, ADD_JOKE_TO_FAVOURITES
+  CHANGE_JOKELIST, TOGGLE_JOKE_TO_FAVOURITES
 } from "../../constants";
 
-export const fetchJokeList = (currentPage) => async dispatch => {
-  const response = await axios.get(`https://karljoke.herokuapp.com/jokes/programming/10?_page=${currentPage}`);
-  dispatch({ type: UPDATE_JOKELIST, payload: response.data })
+export const fetchJokeList = () => async dispatch => {
+  let response;
+  
+  if (!response) dispatch({ type: CHANGE_JOKELIST, payload: []}); 
+  response = await axios.get(`https://karljoke.herokuapp.com/jokes/programming/10`);
+
+  dispatch({ type: CHANGE_JOKELIST, payload: response.data });
 }
 
-// export const updateJokeList = (joke) => ({
-//   type: UPDATE_JOKELIST,
-//   joke
-// });
-
-export const deleteJoke = (jokeId) => ({
-  type: DELETE_JOKE,
-  jokeId
-});
-
-export const addJokeToFavourites = (joke) => ({
-  type: ADD_JOKE_TO_FAVOURITES,
+export const toggleJokeToFavourites = (jokeId, joke) => ({
+  type: TOGGLE_JOKE_TO_FAVOURITES,
+  jokeId,
   joke
 });

@@ -10,7 +10,8 @@
   position: relative;
 
   &:hover {
-    opacity: 0.92;
+
+    background-color:rgb(241, 160, 160, 0.3);
 
     @media (max-width: 782px) {
       transform: scale(1.08);
@@ -50,5 +51,13 @@
       opacity: 1 !important;
       transform: scale(1.2);
     }
+  }
+
+  &__joke-status {
+    position: absolute;
+    font-size: 12px;
+    font-style: italic;
+    top: 30px;
+    right: 10px;
   }
 }
