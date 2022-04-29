@@ -11,7 +11,7 @@ interface Props {
 
 export function Joke({ joke, onFavouriteClick, jokeStatus }: Props) {
   return (
-    <div className="joke-container">
+    <div className="joke-container" data-testid='joke-item'>
       <div className="joke-container__id">joke id: {joke?.id}</div>
       <div className="joke-container__setup">{joke?.setup}</div>
       <div className="joke-container__punchline">{joke?.punchline}</div>
