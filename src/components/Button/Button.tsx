@@ -6,10 +6,10 @@ interface Props {
   updateJokeList: () => void
 }
 
-export function Button({ title, updateJokeList, ...props }: Props) {
+export default function Button({ title, updateJokeList }: Props) {
   return (
-    <button {...props} onClick={updateJokeList}>
+    <button type="button" onClick={updateJokeList}>
       {title}
     </button>
-  )
+  );
 }

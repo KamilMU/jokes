@@ -1,1 +1,0 @@
-export {Joke as default} from './Joke';

@@ -1,13 +1,13 @@
 import React from 'react';
-import Button from '../../components/Button';
 import { useDispatch } from 'react-redux';
+import Button from '../../components/Button/Button';
 import { fetchJokeList } from '../../store/actions';
 
 interface Props {
   title: string,
 }
 
-export function UpdateButton({ title, ...props }: Props) {
+export default function UpdateButton({ title }: Props) {
   const dispatch = useDispatch();
 
   function updateJokes() {
@@ -15,6 +15,6 @@ export function UpdateButton({ title, ...props }: Props) {
   }
 
   return (
-    <Button {...props} updateJokeList={updateJokes} title={title} />
-  )
+    <Button updateJokeList={updateJokes} title={title} />
+  );
 }

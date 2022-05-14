@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import App from "../components/App";
 import { Provider } from 'react-redux';
+import App from '../components/App/App';
 import { store } from '../store';
 
 describe('App test', () => {
@@ -10,6 +10,7 @@ describe('App test', () => {
     render(
       <Provider store={store}>
         <App />
-      </Provider>);
+      </Provider>,
+    );
   });
-})
+});

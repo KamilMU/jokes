@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.scss';
 
-export function Loader() {
+export default function Loader() {
   return (
-    <div className="loader"></div>
-  )
+    <div className="loader" />
+  );
 }

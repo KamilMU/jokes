@@ -1,15 +1,14 @@
 import React from 'react';
 import './styles.scss';
 
-interface Props { 
+interface Props {
   navbar: boolean
 }
 
-export function Header({ navbar }: Props) {
-  
+export default function Header({ navbar }: Props) {
   return (
     <header className={navbar ? 'header scrolled-header' : 'header'}>
-      <a href="#">Jokes</a>
+      <a href="/#">Jokes</a>
     </header>
-  )
+  );
 }

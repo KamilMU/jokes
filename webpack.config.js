@@ -8,14 +8,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[hash:8].js',
-    publicPath: '/'
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
       filename: 'index.html',
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.css', '.scss'],
@@ -44,5 +44,5 @@ module.exports = {
     compress: true,
     port: 9000,
     historyApiFallback: true,
-  }
+  },
 };

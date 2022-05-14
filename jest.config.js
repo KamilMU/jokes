@@ -1,4 +1,4 @@
-const {defaults} = require('jest-config');
+const { defaults } = require('jest-config');
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
   bail: true,
@@ -6,11 +6,11 @@ module.exports = {
   roots: ['src'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    "\\.(css|scss)$": "<rootDir>/src/__mocks__/styleMock.js"
+    '\\.(css|scss)$': '<rootDir>/src/__mocks__/styleMock.js',
   },
   transform: {
-    ".(js|jsx)": "babel-jest",
-    ".(ts|tsx)": "ts-jest"
+    '.(js|jsx)': 'babel-jest',
+    '.(ts|tsx)': 'ts-jest',
   },
   verbose: true,
 };
